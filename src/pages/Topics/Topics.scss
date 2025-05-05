@@ -1,0 +1,85 @@
+.topics {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+        font-size: clamp(20px,2vw,25px);
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 20px 0;
+        width: 90%;
+
+        li {
+            width: 48%;
+            margin-bottom: 20px;
+            margin-top: 20px;
+            border: 1px solid #000;
+            height: 250px;
+            border-radius: 15px;
+            color: #fff;
+
+            &:nth-child(1) {
+                background-image: url('../../../public/chude_1.jpg');
+                background-size: cover;
+            }
+
+            &:nth-child(2) {
+                background-image: url('../../../public/chude_2.jpg');
+                background-size: cover;
+            }
+
+            &:nth-child(3) {
+                background-image: url('../../../public/chude_3.jpg');
+                background-size: cover;
+            }
+
+            &:nth-child(4) {
+                background-image: url('../../../public/chude_4.jpg');
+                background-size: cover;
+            }
+
+            &:nth-child(5) {
+                background-image: url('../../../public/chude_5.jpg');
+                background-size: cover;
+            }
+        }
+
+
+
+        h3 {
+            text-align: center;
+            padding: 20px;
+            font-size: clamp(15px,2vw,18px);
+        }
+    }
+}
+
+    h1 {
+        padding: 20px;
+    }
+
+.topics__backgroud {
+    background-image: url('../../../public/backgroud__topics.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    min-height: 100vh;
+    flex: 1;
+   
+}
+
+@media (max-width:767.98px){
+    .topics{
+       
+        &__list li{
+            width:100%!important;
+        }
+    }
+}

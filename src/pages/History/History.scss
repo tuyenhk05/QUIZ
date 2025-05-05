@@ -1,0 +1,92 @@
+﻿.history {
+    background-image: url("../../../public/backgroud_question.jpg");
+    background-size: cover; /* Kéo dãn ảnh để full màn hình */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    color: #e7cbcb;
+
+    .questions__item {
+        margin-bottom: 15px;
+    }
+
+    h2 {
+        padding: 20px 0;
+    }
+}
+
+.answerid__false{
+    color:red;
+}
+.answerid__true {
+    color: blue;
+}
+h3{
+    margin:0;
+}
+.true{
+    background-color:blue;
+}
+.false {
+    background-color: red;
+}
+.true,.false{
+   padding:3px 7px;
+   border-radius:8px;
+}
+/* From Uiverse.io by suda-code */
+button {
+    padding: 12.5px 30px;
+    border: 0;
+    border-radius: 100px;
+    background-color: #2ba8fb;
+    color: #ffffff;
+    font-weight: Bold;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    margin:12px;
+}
+
+button:hover {
+    background-color: #6fc5ff;
+    box-shadow: 0 0 20px #6fc5ff50;
+    transform: scale(1.1);
+}
+
+button:active {
+    background-color: #3d94cf;
+    transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+    box-shadow: none;
+    transform: scale(0.98);
+}
+.HistoryHome {
+    background-image: url("../../../public/backgroud__history.jpeg");
+    background-size: cover; /* Kéo dãn ảnh để full màn hình */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 76vh;
+    padding-bottom:20px;
+
+    h2 {
+        padding: 20px;
+    }
+
+    &__item {
+        width: 80%;
+        padding: 20px;
+        margin: 0px 20px;
+        margin-top:20px;
+        border: 3px solid #837e3f;
+        border-radius: 10px;
+        font-weight: 600;
+    }
+}
+.feedback{
+    font-size:clamp(18px,2vw,24px);
+}
+.HistoryHome__item{
+    color:#45e819;
+
+}

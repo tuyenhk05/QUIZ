@@ -1,0 +1,16 @@
+﻿.questions {
+    background-image: url("../../../public/backgroud_question.jpg");
+    background-size: cover; /* Kéo dãn ảnh để full màn hình */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    color: #e7cbcb;
+
+    h2 {
+        font-size: clamp(19px,2vw,25px);
+    }
+
+    &__item {
+        padding: 12px 0;
+    }
+}

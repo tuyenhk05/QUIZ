@@ -1,0 +1,161 @@
+﻿$animation-settings:
+    ( 
+    animation-name: example,
+    animation-duration: 1.5s,
+    animation-iteration-count: 1, 
+    animation-fill-mode: forwards, 
+    animation-timing-function: ease-in-out
+);
+@keyframes example {
+    0% {
+        transform: translateY(50%);
+    }
+
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+.main__content {
+    flex: 1;
+    height: 76vh;
+    margin-bottom: 0;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+
+    p {
+        width: 70%;
+        line-height: 2;
+        font-weight: 700;
+        padding: 20px;
+        font-size: clamp(8px, 2vw, 20px);
+
+
+        @each $key, $value in $animation-settings {
+            #{$key}: $value;
+        }
+
+        animation-duration: 2s;
+    }
+
+    h2 {
+        padding: 20px;
+        margin-bottom: 0;
+        font-size: clamp(14px, 4vw, 28px); /* Tối thiểu 16px, tối đa 32px, linh hoạt theo viewport */
+    }
+
+    h1 {
+        margin-top: 0;
+        margin-left: 40px;
+        transform: translateY(50%);
+        font-size: clamp(16px, 4vw, 32px);
+    }
+
+    span {
+        font-weight: 500;
+        display: inline-block;
+        font-size: clamp(12px, 4vw, 28px);
+
+        @each $key, $value in $animation-settings {
+            #{$key}: $value;
+        }
+
+        animation-duration: 2.3s;
+        opacity: 0; /* Ẩn ban đầu */
+        animation: example 1.5s forwards;
+        animation-delay: 3s;
+    }
+
+    button {
+        @each $key, $value in $animation-settings {
+            #{$key}: $value;
+        }
+
+        animation-duration: 2.3s;
+        opacity: 0; /* Ẩn ban đầu */
+        animation: example 1.5s forwards;
+        animation-delay: 3s;
+
+        span {
+            font-size: clamp(12px, 4vw, 20px);
+        }
+    }
+
+    .main__title {
+        @each $key, $value in $animation-settings {
+            #{$key}: $value;
+        }
+        /* Hiệu ứng chuyển động mượt mà */
+    }
+}
+.home_container {
+    background-image: url('../../../public/backgroud_home.jpg');
+    background-size: cover;
+    backdrop-filter: blur(15px);
+}
+h1,h2,h3,h4,h5,h6 {
+    margin-top: 0;
+}
+body {
+    color: #101357;
+    font-family: 'Roboto', sans-serif;
+}
+/* From Uiverse.io by alexmaracinaru */
+.cta {
+    position: relative;
+    margin: auto;
+    padding: 12px 37px;
+    transition: all 0.2s ease;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.cta:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 50px;
+    background: #FF99A4;
+    width: 45px;
+    height: 45px;
+    transition: all 0.3s ease;
+}
+
+.cta span {
+    position: relative;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #234567;
+}
+
+.cta svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #234567;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+}
+
+.cta:hover:before {
+    width: 100%;
+    background: #FEEE7B;
+}
+
+.cta:hover svg {
+    transform: translateX(0);
+}
+
+.cta:active {
+    transform: scale(0.95);
+}
