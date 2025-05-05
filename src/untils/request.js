@@ -1,4 +1,4 @@
-const API = "http://localhost:3005/";
+const API = "https://api-quiz-hkuh.onrender.com/";
 export const get = async (path) => {
     try {
         const response = await fetch(`${API +path}`);
