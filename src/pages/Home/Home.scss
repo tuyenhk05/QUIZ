@@ -26,10 +26,11 @@
 
     p {
         width: 70%;
+        margin: auto;
         line-height: 2;
         font-weight: 700;
         padding: 20px;
-        font-size: clamp(8px, 2vw, 20px);
+        font-size: clamp(12px, 2vw, 20px);
 
 
         @each $key, $value in $animation-settings {
@@ -46,13 +47,14 @@
     }
 
     h1 {
-        margin-top: 0;
+        margin-top: -15px;
         margin-left: 40px;
         transform: translateY(50%);
         font-size: clamp(16px, 4vw, 32px);
     }
 
-    span {
+    >span {
+        margin-left: 10%;
         font-weight: 500;
         display: inline-block;
         font-size: clamp(12px, 4vw, 28px);
@@ -72,6 +74,7 @@
             #{$key}: $value;
         }
 
+        margin-left: 10%;
         animation-duration: 2.3s;
         opacity: 0; /* Ẩn ban đầu */
         animation: example 1.5s forwards;
