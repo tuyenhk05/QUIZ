@@ -13,11 +13,13 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        margin: 20px 0;
+       padding:0;
+       margin:auto;
         width: 90%;
 
         li {
             width: 48%;
+            margin: auto;
             margin-bottom: 20px;
             margin-top: 20px;
             border: 1px solid #000;

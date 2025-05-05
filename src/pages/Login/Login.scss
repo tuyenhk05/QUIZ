@@ -4,16 +4,18 @@
     padding: 20px;
     border-radius: 20px;
     background-color: #fff;
-    width: 30%;
+    width: 70%;
     position: relative;
     top: 20%;
-    left: 35%;
+    margin:auto;
+    max-width:500px;
     background-color: rgba(255, 255, 255, 0.3); /* Nền trắng trong suốt */
     backdrop-filter: blur(10px); /* Làm mờ nền */
     border-radius: 15px; /* Bo góc mềm mại */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 
 }
+
 .login,.singup{
     background-image: url('../../../public/backgroud_login.jpg');
     background-size: contain;
