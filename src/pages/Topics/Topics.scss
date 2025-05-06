@@ -4,6 +4,8 @@
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    padding: 3% 0;
+    min-height: 67vh;
 
     h1 {
         font-size: clamp(20px,2vw,25px);
@@ -13,8 +15,8 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-       padding:0;
-       margin:auto;
+        padding: 0;
+        margin: auto;
         width: 90%;
 
         li {
@@ -72,9 +74,7 @@
     background-size: cover;
     background-attachment: fixed;
     width: 100%;
-    min-height: 100vh;
-    flex: 1;
-   
+
 }
 
 @media (max-width:767.98px){

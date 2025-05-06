@@ -1,4 +1,4 @@
-﻿import { NavLink, Outlet, Link } from 'react-router-dom';
+﻿import { NavLink, Outlet, Link, useNavigate } from 'react-router-dom';
 import './Layout.scss';
 import { useSelector, useDispatch } from 'react-redux';
 import { lockout } from '../action/cart';
@@ -6,6 +6,7 @@ import { FcMenu } from "react-icons/fc";
 import { useState, useRef, useEffect } from 'react';
 
 function Layout() {
+    const navigate = useNavigate(); 
     const isLogin = useSelector(state => state.cartReducer);
     const dispatch = useDispatch();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,6 +14,7 @@ function Layout() {
 
     const handleLockout = () => {
         dispatch(lockout());
+        navigate('/login');
     };
 
     const toggleMenu = () => {
@@ -34,7 +36,7 @@ function Layout() {
     }, []);
 
     return (
-        <>
+        <><div className="app">
             <div className="Layout__background">
                 <div className="container">
                     <header className="Layout__header">
@@ -92,13 +94,14 @@ function Layout() {
                 </div>
             </div>
 
-            <main>
+            <main className="content">
                 <Outlet />
             </main>
 
             <footer>
                 <p>© 2025 - Love question forever by HUYNHKIMTUYEN</p>
             </footer>
+        </div>
         </>
     );
 }
