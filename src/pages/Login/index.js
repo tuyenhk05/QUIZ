@@ -1,4 +1,5 @@
-﻿import React, { useState, useEffect } from 'react';
+﻿/* eslint-disable no-use-before-define */
+import React, { useState, useEffect } from 'react';
 //import { get } from '../../untils/request';
 import './Login.scss';
 import { getData } from '../../services/productService';
@@ -11,6 +12,22 @@ import Icon from '@ant-design/icons';
 import { message } from 'antd';
 
 function Login() {
+
+       
+    const reload = async () => {
+        try {
+            const data = await getData('users'); // Gọi API để lấy dữ liệu mới
+            setDatabase(data); // Cập nhật lại state database
+            console.log('Reloaded user data:', data); // Log để kiểm tra
+        } catch (error) {
+            console.error('Failed to reload user data:', error);
+        }
+       
+    };
+    useEffect(() => {
+        reload(); // Gọi hàm reload khi trang được tải
+    }, []);
+    reload();
     const [messageApi, contextHolder] = message.useMessage();
     const success = () => {
         messageApi.open({
@@ -77,7 +94,7 @@ function Login() {
         username: '',
         password: ''
     });
-
+   
     const [database, setDatabase] = useState([]);
 
     // Đọc dữ liệu từ database.json
