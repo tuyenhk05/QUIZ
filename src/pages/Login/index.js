@@ -27,7 +27,7 @@ function Login() {
     useEffect(() => {
         reload(); // Gọi hàm reload khi trang được tải
     }, []);
-    reload();
+    //reload();
     const [messageApi, contextHolder] = message.useMessage();
     const success = () => {
         messageApi.open({

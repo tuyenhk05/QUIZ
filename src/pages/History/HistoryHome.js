@@ -104,9 +104,10 @@ function HistoryHome() {
                 <h2>Lịch sử làm bài của bạn</h2>
                 {state.isLogin ? (
 
-                        data.length > 0 ? (
-                            data.map((item) => (
-                                <Spin spinning={loading} indicator={<PandaIcon style={{ fontSize: '64px' }} spin />}>
+                    data.length > 0 ? (
+                        <Spin spinning={loading} indicator={<PandaIcon style={{ fontSize: '64px' }} spin />}>
+                            {data.map((item) => (
+
 
                                 <div
                                     className="HistoryHome__item"
@@ -115,11 +116,12 @@ function HistoryHome() {
                                 >
                                     {topicNames[item.topicId] || "Chủ đề khác"} &nbsp;
                                     (<b>{item.percentage}%</b> {item.correctCount}/{item.totalQuestions} câu)
-                                    </div>
-                                </Spin>
+                                </div>
+
 
                             )
-                            )
+                       
+                            ) }</Spin>
                         
                     
                         
