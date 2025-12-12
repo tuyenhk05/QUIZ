@@ -18,20 +18,23 @@
 }
 .main__content {
     flex: 1;
-    height: 76vh;
+    height: 80vh;
     margin-bottom: 0;
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
+    color: #4E342E;
 
     p {
-        width: 70%;
+        width: 50%;
         margin: auto;
         line-height: 2;
         font-weight: 700;
         padding: 20px;
         font-size: clamp(12px, 2vw, 20px);
-
+        text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.7);
+        text-align: left;
+        margin-left: 20px;
 
         @each $key, $value in $animation-settings {
             #{$key}: $value;
@@ -47,13 +50,13 @@
     }
 
     h1 {
-        margin-left: 40px;
+        margin-left: 20px;
         transform: translateY(50%);
         font-size: clamp(16px, 4vw, 32px);
     }
 
-    >span {
-        margin-left: 10%;
+    > span {
+        margin-left: 20px;
         font-weight: 500;
         display: inline-block;
         font-size: clamp(12px, 4vw, 28px);
@@ -73,7 +76,7 @@
             #{$key}: $value;
         }
 
-        margin-left: 10%;
+        margin-left: 20px;
         animation-duration: 2.3s;
         opacity: 0; /* Ẩn ban đầu */
         animation: example 1.5s forwards;
@@ -81,6 +84,7 @@
 
         span {
             font-size: clamp(12px, 4vw, 20px);
+            color: #bb3939;
         }
     }
 
@@ -92,7 +96,10 @@
     }
 }
 .home_container {
-
+    background-image: url("../../../public/background_home.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 h1,h2,h3,h4,h5,h6 {
     margin-top: 0;

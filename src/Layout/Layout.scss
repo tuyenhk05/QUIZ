@@ -1,10 +1,10 @@
 ﻿/* Header chính */
 .Layout__background {
-    background-color: #2389FF !important;
-    height: 12vh;
+    background-color: #F8BBD0 !important;
     position: sticky;
     top: 0;
     z-index: 1000;
+
 }
 
 /* Container chính */
@@ -17,7 +17,7 @@
 /* Link */
 a {
     text-decoration: none;
-    color: black;
+    color: #907168;
     transition: color 0.3s ease-in-out;
 }
 
@@ -42,16 +42,16 @@ body {
 /* Header chính */
 .Layout__header {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    height: 12vh;
+    height: 100px;
     padding: 0 1rem;
 }
 
 /* Logo */
 .Layout__header--logo {
     font-weight: bold;
-    font-size: clamp(12px, 4vw, 20px);
+    font-size: clamp(12px, 4vw, 30px);
 }
 
 .Layout__header--logo a:hover {
@@ -66,26 +66,28 @@ body {
 .Layout__header--menu li {
     margin-right: 1.5rem;
     font-size: clamp(10px, 2vw, 20px);
-    font-weight: 500;
+    font-weight: 700;
 }
 
 /* Đăng nhập/Đăng ký */
 .Layout__header--loginsignup {
     display: flex;
     font-size: clamp(10px, 2vw, 18px);
-    font-weight: 300;
+    font-weight: 600;
+    gap: 0.3rem;
 }
 
 /* Footer */
 footer {
-    background-color: #2389FF;
+    background-color: #F8BBD0;
     text-align: center;
-    line-height: 12vh;
+    line-height: 100px;
     font-size: clamp(10px, 4vw, 18px);
     width: 100%;
     position: static;
     bottom: 0;
 
+    color: #907168;
     p {
         margin-top: 0;
         margin-bottom: 0;
@@ -215,4 +217,8 @@ html, body {
 
 .content {
     flex: 1;
+    background-image: url("../../public/background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
