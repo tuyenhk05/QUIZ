@@ -5,6 +5,7 @@ import { getData } from '../../services/productService';
 import { FcPrevious } from "react-icons/fc";
 import { Spin } from 'antd';
 import Icon from '@ant-design/icons';
+import  PercentSuccess  from '../../components/chart/PercentSuccess'; 
 function HistoryAnswer() {
     const PandaSvg = () => (
         <svg viewBox="0 0 1024 1024" width="1em" height="1em" fill="currentColor">
@@ -86,6 +87,7 @@ function HistoryAnswer() {
             return userAnswer?.answer === q.correctAnswer;
         }).length;
     }, [data, dataQuestion]);
+
     const feedbackMessage = useMemo(() => {
         const percent = (correctAnswersCount / dataQuestion.length) * 100;
 
@@ -95,7 +97,7 @@ function HistoryAnswer() {
         if (percent < 90) return "Xuất sắc! Bạn gần như hoàn hảo rồi!";
         return "Hoàn hảo! Bạn đã đạt điểm tối đa!";
     }, [correctAnswersCount, dataQuestion.length]);
-
+    console.log(correctAnswersCount);
     return (
         <Spin spinning={loading} indicator={<PandaIcon style={{ fontSize: '64px' }} spin />}>
 
@@ -105,7 +107,8 @@ function HistoryAnswer() {
             <div className="container">
                 <h2>Lịch sử làm bài</h2>
                 {dataQuestion.length > 0 && (
-                    <>
+                        <>
+                            <PercentSuccess score={correctAnswersCount } />
                         <h3>Bạn đã trả lời đúng {((correctAnswersCount / dataQuestion.length) * 100).toFixed(1)}% ({correctAnswersCount} / {dataQuestion.length} câu)</h3>
                         <p className="feedback">{feedbackMessage}</p>
                     </>

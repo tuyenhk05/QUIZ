@@ -57,9 +57,9 @@ function Layout() {
                             </div>
                         ) : (
                             <div className="Layout__header--loginsignup">
-                                <NavLink to="login" onClick={() => setIsMenuOpen(false)}>Đăng nhập</NavLink>
+                                <NavLink to="login" onClick={() => setIsMenuOpen(false)}>Đăng nhập </NavLink>
                                 <span> | </span>
-                                <NavLink to="register" onClick={() => setIsMenuOpen(false)}>Đăng ký</NavLink>
+                                <NavLink to="register" onClick={() => setIsMenuOpen(false)}> Đăng ký</NavLink>
                             </div>
                         )}
 

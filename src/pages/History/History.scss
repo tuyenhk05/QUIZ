@@ -1,7 +1,7 @@
 ﻿.history {
-
-    color: #e7cbcb;
+    color: #654661;
     padding: 5% 5%;
+
     .questions__item {
         margin-bottom: 15px;
     }
@@ -26,9 +26,10 @@ h3{
 .false {
     background-color: red;
 }
-.true,.false{
-   padding:3px 7px;
-   border-radius:8px;
+.true, .false {
+    padding: 3px 7px;
+    border-radius: 8px;
+    color: #fff;
 }
 /* From Uiverse.io by suda-code */
 button {
